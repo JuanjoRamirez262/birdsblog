@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS birdblog_db;
+CREATE DATABASE birdblog_db;
