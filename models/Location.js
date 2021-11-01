@@ -2,8 +2,8 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class Hike extends Model {}
+class Location extends Model {}
 
-Hike.init()
+Location.init()
 
-module.exports = Hike;
+module.exports = Location;
