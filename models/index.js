@@ -14,5 +14,5 @@ const User = require('./User')
 // Post.hasOne(Location)
 // Post.hasMany(Like)
 
-module.exports = User;
+module.exports = { User };
 // module.exports = { User, Post, Location, Bird, Comment }
