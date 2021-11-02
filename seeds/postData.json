@@ -1,0 +1,17 @@
+[
+    {
+        "description": "Saw a robin!",
+        "locationId": 1,
+        "userId": 1
+    },
+    {
+        "description": "Saw a eagle!",
+        "locationId": 2,
+        "userId": 2
+    },
+    {
+        "description": "Saw a Condor!",
+        "locationId": 3,
+        "userId": 3
+    }
+]
