@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Bird extends Model { }
+class SeenBird extends Model { }
 
-Bird.init(
+SeenBird.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,22 +11,26 @@ Bird.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
+        post_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
-        description: {
+        bird_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        date: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
     },
     {
-        sequelize,
-        timestamps: false,
+        sequelize, 
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'bird',
+        modelName: 'seen_bird',
     }
 )
 
-module.exports = Bird;
+module.exports = SeenBird;
