@@ -15,7 +15,7 @@ User.hasOne(Bird)
 // Post
 Post.belongsTo(User)
 Post.hasMany(Comment)
-Post.hasMany(Bird, {
+Post.belongsToMany(Bird, {
     through: SeenBird
 })
 Post.hasOne(Location)
@@ -24,8 +24,8 @@ Post.hasMany(Like, {
 })
 
 // SeenBird
-SeenBird.belongsToMany(Post)
-SeenBird.belongsToMany(Bird)
+SeenBird.belongsTo(Post)
+SeenBird.belongsTo(Bird)
 
 // Bird
 Bird.belongsTo(User)
