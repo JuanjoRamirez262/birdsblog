@@ -11,11 +11,11 @@ SeenBird.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        postId: {
+        post_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        birdId: {
+        bird_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -29,7 +29,7 @@ SeenBird.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'seen_bird',
+        modelName: 'seenBird',
     }
 )
 

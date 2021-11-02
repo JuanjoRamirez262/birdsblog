@@ -1,17 +1,17 @@
 [
     {
-        "postId": 1,
-        "birdId": 1,
+        "post_id": 1,
+        "bird_id": 1,
         "date": 163588234
     },
     {
-        "postId": 2,
-        "birdId": 2,
+        "post_id": 2,
+        "bird_id": 2,
         "date": 163548234
     },
     {
-        "postId": 3,
-        "birdId": 3,
+        "post_id": 3,
+        "bird_id": 3,
         "date": 160548234
     }
 ]

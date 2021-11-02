@@ -1,17 +1,17 @@
 [
     {
         "description": "Saw a robin!",
-        "locationId": 1,
-        "userId": 1
+        "location_id": 1,
+        "user_id": 1
     },
     {
         "description": "Saw a eagle!",
-        "locationId": 2,
-        "userId": 2
+        "location_id": 2,
+        "user_id": 2
     },
     {
         "description": "Saw a Condor!",
-        "locationId": 3,
-        "userId": 3
+        "location_id": 3,
+        "user_id": 3
     }
 ]
