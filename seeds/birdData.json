@@ -1,0 +1,14 @@
+[
+    {
+        "name": "American Robin",
+        "description": "The American robin (Turdus migratorius) is a migratory songbird of the true thrush genus and Turdidae, the wider thrush family. It is named after the European robin because of its reddish-orange breast, though the two species are not closely related, with the European robin belonging to the Old World flycatcher family. The American robin is widely distributed throughout North America, wintering from southern Canada to central Mexico and along the Pacific Coast. It is the state bird of Connecticut, Michigan, and Wisconsin."
+    },
+    {
+        "name": "Eagle",
+        "description": "Eagles are large, powerfully built birds of prey, with heavy heads and beaks. Even the smallest eagles, such as the booted eagle (Aquila pennata), which is comparable in size to a common buzzard (Buteo buteo) or red-tailed hawk (B. jamaicensis), have relatively longer and more evenly broad wings, and more direct, faster flight – despite the reduced size of aerodynamic feathers. Most eagles are larger than any other raptors apart from some vultures. The smallest species of eagle is the South Nicobar serpent eagle (Spilornis klossi), at 450 g (1 lb) and 40 cm (16 in). The largest species are discussed below. Like all birds of prey, eagles have very large hooked beaks for ripping flesh from their prey, strong, muscular legs, and powerful talons. The beak is typically heavier than that of most other birds of prey. Eagles' eyes are extremely powerful. It is estimated that the martial eagle, whose eyes are more than two times larger than the human eye, has a visual acuity up to 8 times that of humans. This acuity enables eagles to spot potential prey from a very long distance. This keen eyesight is primarily attributed to their extremely large pupils which ensure minimal diffraction (scattering) of the incoming light. The female of all known species of eagles is larger than the male."
+    },
+    {
+        "name": "Chilean Condor",
+        "description": "condors are very large broad-winged soaring birds, the Andean condor being 5 cm (2 in) shorter (beak to tail) on average than the northern species, but heavier and larger in wingspan. California condors are the largest flying land birds in North America. Among all living flying birds, the Andean condor is the third heaviest after the Kori bustard and great bustard (up to 21 kg or 46 lb), and second only to the wandering albatross (up to 3.5 m or 11 ft 6 in) in wingspan."
+    }   
+]

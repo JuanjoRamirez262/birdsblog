@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Mount Rainier National Park",
+        "lat" : 46.86566,
+        "lon" : -121.76574  
+    },
+    {
+        "name": "North Cascade",
+        "lat" : 48.77103,
+        "lon" : -121.29510  
+    },
+    {
+        "name": "Cherry Creek Falls",
+        "lat" : 47.74604,
+        "lon" : -121.90884  
+    }
+]

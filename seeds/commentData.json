@@ -1,0 +1,32 @@
+[
+    {
+        "postId": 1,
+        "userId": 2,
+        "content": "WOW!"
+    },
+    {
+        "postId": 1,
+        "userId": 4,
+        "content": "Amazing!"
+    },
+    {
+        "postId": 2,
+        "userId": 1,
+        "content": "I saw it too!"
+    },
+    {
+        "postId": 2,
+        "userId": 3,
+        "content": "No way!!"
+    },
+    {
+        "postId": 3,
+        "userId": 5,
+        "content": "I love that bird!"
+    },
+    {
+        "postId": 3,
+        "userId": 1,
+        "content": ":O"
+    }
+]

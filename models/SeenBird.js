@@ -11,11 +11,11 @@ SeenBird.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        post_id: {
+        postId: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        bird_id: {
+        birdId: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -26,7 +26,7 @@ SeenBird.init(
     },
     {
         sequelize, 
-        timestamps: true,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'seen_bird',

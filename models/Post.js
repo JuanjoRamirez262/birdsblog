@@ -14,11 +14,11 @@ Post.init({
     description: {
         type: DataTypes.TEXT,
     },
-    location_id: {
-        type: DataTypes.STRING,
+    locationId: {
+        type: DataTypes.INTEGER,
         allowNull: true
     },
-    user_id: {
+    userId: {
         type: DataTypes.INTEGER,
         allowNull: false
     }

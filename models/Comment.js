@@ -11,11 +11,11 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        post_id: {
+        postId: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        user_id: {
+        userId: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
