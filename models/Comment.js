@@ -11,15 +11,15 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        postId: {
+        post_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        userId: {
+        user_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        content: {
+        content: { 
             type: DataTypes.STRING,
             allowNull: false
         }
@@ -29,7 +29,7 @@ Comment.init(
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'seen_bird',
+        modelName: 'comment',
     }
 )
 

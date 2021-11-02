@@ -11,11 +11,11 @@ Like.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        postId: {
+        post_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        userId: {
+        user_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
