@@ -14,26 +14,14 @@ Post.init({
     description: {
         type: DataTypes.TEXT,
     },
-    birds_seen: {
-        type: DataTypes.STRING
-    },
-    location: {
-        type: DataTypes.STRING
-    },
-    date_seen: {
+    location_id: {
         type: DataTypes.STRING,
+        allowNull: true
     },
     user_id: {
         type: DataTypes.INTEGER,
         allowNull: false
-    },
-    // bird_id: {
-    //     type: DataTypes.STRING,
-    //     references: {
-    //         model: 'bird',
-    //         key: 'id',
-    //     }
-    // }
+    }
 }, {
     sequelize,
     timestamps: true,
