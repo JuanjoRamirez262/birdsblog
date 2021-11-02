@@ -21,7 +21,7 @@ const seedDatabase = async () => {
         await Bird.bulkCreate(birdData)
         await Location.bulkCreate(locationData)
         await Post.bulkCreate(postData)
-        await SeenBird.bulkBuild(seenBirdData)
+        await SeenBird.bulkCreate(seenBirdData)
         await Comment.bulkCreate(commentData)
         await Like.bulkCreate(likeData)
         process.exit(0);
