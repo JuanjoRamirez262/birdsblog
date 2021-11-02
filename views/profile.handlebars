@@ -1,0 +1,19 @@
+
+
+  {{#each users as |user|}}
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card center blue darken-1">
+        <div class="card-content white-text horizontal">
+          <span class="card-title">{{user.name}}</span>
+          <p>{{user.id}} : This is currently displaying the User ID</p>
+          <p></p>
+        </div>
+        <div class="card-action">
+          <a href="mailto:{{user.email}}">{{user.email}}</a>
+          <a href="{{post.id}}">{{post.id}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
