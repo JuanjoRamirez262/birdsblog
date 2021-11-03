@@ -16,7 +16,8 @@
       </div>
     </form>
   </div>
- 
+  
+ {{#each users as |user| }}
  <div class="row">
     <div class="col s12 m7">
       <div class="card">
@@ -29,12 +30,10 @@
         </div>
         <div class="card-action">
           <a href="#">My Posts</a>
-          <a href="#">My Posts</a>
         </div>
       </div>
       <div class="card-action">
         <a href="mailto:{{user.email}}">{{user.email}}</a>
-        <a href="{{post.id}}">{{post.id}}</a>
       </div>
     </div>
   </div>

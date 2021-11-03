@@ -1,20 +1,3 @@
-
-<div class="row">
-  <div class="col s6">
-    <div class="card">
-      <div class="card-image">
-        <img
-          src="https://www.thespruce.com/thmb/rk3DGZLrlgEOprRfSwKqKopUzk4=/2121x1193/smart/filters:no_upscale()/Bird-GettyImages-582446599-58ec5c4d5f9b58ef7e24e7f4.jpg">
-        <span class="card-title">{{bird.name}}BIRD NAME</span>
-      </div>
-      <div class="card-content">
-        <p><h5>{{user.id}}User ID</h5></p>
-        <p><h5>{{user.post}}Their Post</h5></p>
-        <p><h5>{{user.location}}Location of post</h5></p>
-      </div>
-      <div class="card-action">
-        <a href="#"><h5>See More of {{user.name}}'s Posts</h5></a>
-      </div>
-    </div>
-  </div>
-  
+{{#each users as |user| }}
+    {{> usercard }}
+{{/each}}
