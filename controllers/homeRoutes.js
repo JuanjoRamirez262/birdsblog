@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Post } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/content', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
@@ -11,7 +11,7 @@ router.get('/content', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render("homepage", {
+    res.render("landing", {
       users,
       logged_in: req.session.logged_in,
     });
@@ -64,8 +64,8 @@ router.get("/profile", (req, res) => {
   }).then(userPosts => {
     // res.json(userPosts)
     if (userPosts) {
-      const posts=userPosts.map((project)=> project.get({plain: true}));
-      res.render('homepage', {posts})
+      const posts = userPosts.map((project) => project.get({ plain: true }));
+      res.render('homepage', { posts })
     } else {
       res.status(404).json({ message: "No users found in db" })
     }

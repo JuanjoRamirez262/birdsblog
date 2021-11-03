@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,101 +11,18 @@
 
 </head>
 
-<<<<<<< HEAD
-  <body>
-    <header class="display-flex justify-space-between align-center p-2">
-      <nav>
-        <div class="nav-wrapper blue darken-2">
-          <a href="#" class="brand-logo center">A Bird's Eye View</a>
-          <ul class="right hide-on-med-and-down">
-            {{#if logged_in}}
-              <li><button class="btn" id="logout">logout</button></li>
-              <script src="/js/logout.js"></script>
-            {{/if}}
-            <li><a href="badges.html">Posts</a></li>
-            <li class="active"><a href="badges.html">Profile Page</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      {{{body}}}
-    </main>
-=======
 <body>
 {{> header}}
   <main class="container-fluid mt-5">
     {{{ body }}}
   </main>
->>>>>>> dev
 
-<<<<<<< HEAD
-    {{!-- {{#if logged_in}}
-      <button class="btn" id="logout">logout</button>
-      <script src="/js/logout.js"></script>
-    {{/if}} --}}
-    <footer class="page-footer blue darken-2">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <p class="grey-text text-lighten-4"><h4>Empowering users to create
-                and post their bird sightings and encouraging an engaging
-                atmosphere with a community of fellow bird watchers!</h4></p>
-=======
   {{#if logged_in}}
   <button class="btn" id="logout" style="position">logout</button>
   <script src="/js/logout.js"></script>
   <script src="/js/post.js"></script>
   {{/if}}
-<<<<<<< HEAD
-          <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <p class="grey-text text-lighten-4"><h4>Empowering users to create and post their bird sightings and encouraging an engaging atmosphere with a community of fellow bird watchers!</h4></p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">About the Creators</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Resources</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Additional Links</a></li>
-                </ul>
-              </div>
-            </div>
->>>>>>> dev
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a
-                  class="grey-text text-lighten-3"
-                  href="https://github.com/JuanjoRamirez262/birdsblog"
-                >About the Creators</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
-              <li><a
-                  class="grey-text text-lighten-3"
-                  href="#!"
-                >Resources</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Additional Links</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright center">
-        <div class="container">
-          © 2021 A Bird's-Eye View
-        </div>
-      </div>
-    </footer>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
-    ></script>
-  </body>
-=======
 {{> footer}}
 </body>
 
->>>>>>> dev
 </html>
