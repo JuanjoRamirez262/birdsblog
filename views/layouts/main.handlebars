@@ -10,6 +10,7 @@
 
 </head>
 
+<<<<<<< HEAD
   <body>
     <header class="display-flex justify-space-between align-center p-2">
       <nav>
@@ -29,6 +30,13 @@
     <main class="container container-fluid mt-5">
       {{{body}}}
     </main>
+=======
+<body>
+{{> header}}
+  <main class="container-fluid mt-5">
+    {{{ body }}}
+  </main>
+>>>>>>> dev
 
 <<<<<<< HEAD
     {{!-- {{#if logged_in}}
@@ -44,10 +52,11 @@
                 atmosphere with a community of fellow bird watchers!</h4></p>
 =======
   {{#if logged_in}}
-        <button class="btn" id="logout" >logout</button>
+  <button class="btn" id="logout" style="position">logout</button>
   <script src="/js/logout.js"></script>
   <script src="/js/post.js"></script>
   {{/if}}
+<<<<<<< HEAD
           <footer class="page-footer">
           <div class="container">
             <div class="row">
@@ -93,4 +102,9 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
     ></script>
   </body>
+=======
+{{> footer}}
+</body>
+
+>>>>>>> dev
 </html>
