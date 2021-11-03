@@ -1,3 +1,6 @@
-{{#each users as |user| }}
-    {{> usercard }}
+{{#each users as |user|}}
+
+    {{#> usercard }}
+      {{bird.name}}
+    {{/usercard}}
 {{/each}}
