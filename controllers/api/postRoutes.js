@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const { Post,User } = require("../../models");
+const { Post, User, SeenBird } = require("../../models");
 
 router.get("/", (req, res) => {
     Post.findAll({
         include: [{
             model: User,
             attributes: {
-            exclude: ["password"]
-        }
+                exclude: ["password"]
+            }
         }]
     }).then(dbPosts => {
         if (dbPosts.length) {
@@ -24,29 +24,42 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
     console.log(req.body)
-    if(!req.session.logged_in){
+    if (!req.session.logged_in) {
         return res.status(401).send("please login first")
     }
     Post.create({
         description: req.body.description,
         //pass in UserId of logged in user session (rq.session.user.id)
-        userId: req.session.user_id
+        user_id: req.session.user_id,
+        location_id: req.body.location_id
     }).then(newPost => {
-        res.json(newPost);
-    }).catch(err => {
+        SeenBird.create({
+            post_id: newPost.id,
+            bird_id: req.body.bird_id
+        })
+            .then((newSeenBird) => {
+                res.status(200).json({
+                    message: "Post created",
+                    // newPost,
+                    newSeenBird
+                })
+            })
+        // res.status(200).json(newPost)
+    }
+    ).catch(err => {
         console.log(err);
         res.status(500).json({ message: "An error occured", err: err })
     })
 })
 
-router.delete("/:id",(req,res)=>{
+router.delete("/:id", (req, res) => {
     Post.destroy({
-        where:{
-            id:req.params.id
+        where: {
+            id: req.params.id
         }
-    }).then(delPost=>{
+    }).then(delPost => {
         res.json(delPost)
     })
 })
 
-module.exports=router;
+module.exports = router;
