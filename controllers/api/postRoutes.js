@@ -24,15 +24,14 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+    console.log(req.body)
     if(!req.session.logged_in){
         return res.status(401).send("please login first")
     }
     Post.create({
         description: req.body.description,
-        date_seen: req.body.date_seen,
-        birds_seen: req.body.birds_seen,
         //pass in UserId of logged in user session (rq.session.user.id)
-        user_id: req.session.user_id
+        userId: req.session.user_id
     }).then(newPost => {
         res.json(newPost);
     }).catch(err => {

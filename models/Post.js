@@ -14,14 +14,14 @@ Post.init({
     description: {
         type: DataTypes.TEXT,
     },
-    location_id: {
+    locationId: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    userId: {
         type: DataTypes.INTEGER,
         allowNull: false
-    },
-    user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
+    }
 }, {
     sequelize,
     timestamps: true,

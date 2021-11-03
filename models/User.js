@@ -35,9 +35,9 @@ User.init(
                 len: [8],
             },
         },
-        favorite_bird: {
-            type: DataTypes.INTEGER
-        }
+//        favorite_bird: {
+//            type: DataTypes.INTEGER
+//        }
     },
     {
         hooks: {
