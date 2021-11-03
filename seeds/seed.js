@@ -18,12 +18,21 @@ const seedDatabase = async () => {
             individualHooks: true,
             returning: true,
         });
+<<<<<<< HEAD
         // await Bird.bulkCreate(birdData)
         // await Location.bulkCreate(locationData)
         // await Post.bulkCreate(postData)
         // await SeenBird.bulkBuild(seenBirdData)
         // await Comment.bulkCreate(commentData)
         // await Like.bulkCreate(likeData)
+=======
+        await Bird.bulkCreate(birdData)
+        await Location.bulkCreate(locationData)
+        await Post.bulkCreate(postData)
+        await SeenBird.bulkCreate(seenBirdData)
+        await Comment.bulkCreate(commentData)
+        await Like.bulkCreate(likeData)
+>>>>>>> dev
         process.exit(0);
     } catch (err) {
         throw err
