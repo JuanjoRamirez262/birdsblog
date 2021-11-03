@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Post } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -28,6 +28,51 @@ router.get('/login', (req, res) => {
   }
   res.render('login');
 
+});
+
+//get all posts
+router.get("/content", (req, res) => {
+  Post.findAll({
+    include: [{
+      model: User,
+      attributes: {
+        exclude: ["password"]
+      }
+    }]
+  }).then(dbPosts => {
+    if (dbPosts.length) {
+      const posts = dbPosts.map((project) => project.get({ plain: true }));
+
+      res.render('homepage', {
+        posts,
+      })
+    } else {
+      res.status(404).json({ message: "No posts found in db" })
+    }
+  }).catch(err => {
+    console.log(err)
+    res.status(500).json({ message: "An error occured getting all posts", err: err })
+  });
+});
+
+// get all posts by a single user
+router.get("/profile", (req, res) => {
+  Post.findAll({
+    where: {
+      user_id: req.session.user_id
+    },
+  }).then(userPosts => {
+    // res.json(userPosts)
+    if (userPosts) {
+      const posts=userPosts.map((project)=> project.get({plain: true}));
+      res.render('homepage', {posts})
+    } else {
+      res.status(404).json({ message: "No users found in db" })
+    }
+  }).catch(err => {
+    console.log(err)
+    res.status(500).json({ message: "An error occured", err: err })
+  });
 });
 
 module.exports = router;
