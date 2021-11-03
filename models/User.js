@@ -34,10 +34,7 @@ User.init(
             validate: {
                 len: [8],
             },
-        },
-//        favorite_bird: {
-//            type: DataTypes.INTEGER
-//        }
+        }
     },
     {
         hooks: {
@@ -53,7 +50,7 @@ User.init(
         sequelize,
         timestamps: false,
         freezeTableName: true,
-        underscored: true,
+        // underscored: true,
         modelName: 'user',
     }
 );

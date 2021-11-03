@@ -14,8 +14,8 @@ Post.init({
     description: {
         type: DataTypes.TEXT,
     },
-    locationId: {
-        type: DataTypes.STRING,
+    location_id: {
+        type: DataTypes.INTEGER,
         allowNull: true
     },
     userId: {

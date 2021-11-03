@@ -10,7 +10,6 @@ const Like = require('./Like')
 User.hasMany(Post,{
     onDelete: 'CASCADE'
 })
-//User.hasOne(Bird)
 
 // Post
 Post.belongsTo(User)
@@ -30,7 +29,6 @@ SeenBird.belongsTo(Post)
 SeenBird.belongsTo(Bird)
 
 // Bird
-//Bird.belongsTo(User)
 Bird.belongsToMany(Post, {
     through: SeenBird
 })
@@ -45,4 +43,4 @@ Like.belongsTo(Post)
 
 Location.belongsTo(Post)
 
-module.exports = { User, Post, Location, Bird, Comment, SeenBird }
+module.exports = { User, Post, Location, Bird, Comment, SeenBird, Like }

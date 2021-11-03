@@ -19,7 +19,7 @@ Comment.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        content: {
+        content: { 
             type: DataTypes.STRING,
             allowNull: false
         }
@@ -29,7 +29,7 @@ Comment.init(
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'seen_bird',
+        modelName: 'comment',
     }
 )
 
