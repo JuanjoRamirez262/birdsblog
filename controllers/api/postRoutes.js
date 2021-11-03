@@ -42,7 +42,7 @@ router.post("/", (req, res) => {
             .then((newSeenBird) => {
                 res.status(200).json({
                     message: "Post created",
-                    // newPost,
+                    newPost,
                     newSeenBird
                 })
             })
