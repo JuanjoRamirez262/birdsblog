@@ -40,6 +40,7 @@ Comment.belongsTo(Post)
 Like.belongsTo(Post)
 
 // Location
+
 Location.belongsTo(Post)
 
 module.exports = { User, Post, Location, Bird, Comment, SeenBird, Like }
