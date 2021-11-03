@@ -60,13 +60,13 @@ router.post('/', async (req, res) => {
     const newUser = await User.create({
       name: req.body.name,
       email: req.body.email,
-      password: req.body.password,
+      password: req.body.password
     });
 
     // Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
       req.session.logged_in = true;
-
+      console.log(newUser)
       res.status(200).json(newUser);
     });
   } catch (err) {
