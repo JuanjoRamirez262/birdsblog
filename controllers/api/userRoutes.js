@@ -23,9 +23,9 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.name= userData.name;
+      req.session.name = userData.name;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
@@ -38,7 +38,7 @@ router.post('/logout', (req, res) => {
   console.log(req.session);
   if (req.session.logged_in) {
     req.session.destroy(() => {
-      res.status(200).json({ message: "you are logged out"});
+      res.status(200).json({ message: "you are logged out" });
     });
   } else {
     res.status(404).end();
@@ -48,7 +48,7 @@ router.post('/logout', (req, res) => {
 router.get('/session', (req, res) => {
   console.log(req.session);
   if (req.session.logged_in) {
-      res.status(200).json(req.session);
+    res.status(200).json(req.session);
   } else {
     res.status(404).end();
   }
@@ -78,21 +78,50 @@ router.post('/', async (req, res) => {
 //findall users
 router.get("/", (req, res) => {
   User.findAll({
-      include: [{
-          model: Post,
-          // attributes: {
-          //     exclude: ["createdAt", "updatedAt"]
-          // }
-      }]
+    attributes: {
+      exclude: ["password"]
+    },
+    include: [{
+      model: Post,
+      // attributes: {
+      //     exclude: ["createdAt", "updatedAt", "password"]
+      // }
+    }]
   }).then(dbUser => {
-      if (dbUser.length) {
-          res.json(dbUser)
-      } else {
-          res.status(404).json({ message: "No users found in db" })
-      }
+    if (dbUser.length) {
+      res.json(dbUser)
+    } else {
+      res.status(404).json({ message: "No users found in db" })
+    }
   }).catch(err => {
-      console.log(err)
-      res.status(500).json({ message: "An error occured", err: err })
+    console.log(err)
+    res.status(500).json({ message: "An error occured", err: err })
+  });
+});
+
+router.get("/:id", (req, res) => {
+  User.findAll({
+    where: {
+      id: req.params.id
+    },
+    attributes: {
+      exclude: ["password"]
+    },
+    include: [{
+      model: Post,
+      // attributes: {
+      //     exclude: ["createdAt", "updatedAt", "password"]
+      // }
+    }]
+  }).then(dbUser => {
+    if (dbUser.length) {
+      res.json(dbUser)
+    } else {
+      res.status(404).json({ message: "No users found in db" })
+    }
+  }).catch(err => {
+    console.log(err)
+    res.status(500).json({ message: "An error occured", err: err })
   });
 });
 
