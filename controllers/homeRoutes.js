@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Post } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/content', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
@@ -31,7 +31,7 @@ router.get('/login', (req, res) => {
 });
 
 //get all posts
-router.get("/content", (req, res) => {
+router.get("/", (req, res) => {
   Post.findAll({
     include: [{
       model: User,
