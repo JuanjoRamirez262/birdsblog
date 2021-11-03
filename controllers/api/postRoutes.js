@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { Post, User, SeenBird } = require("../../models");
+const moment = require('moment')
 
 router.get("/", (req, res) => {
     Post.findAll({
@@ -35,7 +36,8 @@ router.post("/", (req, res) => {
     }).then(newPost => {
         SeenBird.create({
             post_id: newPost.id,
-            bird_id: req.body.bird_id
+            bird_id: req.body.bird_id,
+            date: moment().unix()
         })
             .then((newSeenBird) => {
                 res.status(200).json({
