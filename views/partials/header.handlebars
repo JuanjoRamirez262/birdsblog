@@ -1,16 +1,16 @@
 <header class="display-flex justify-space-between align-center p-2">
     <nav>
-        <div class="nav-wrapper">
-            <img src="/birdsblog/assets/lorem-logo.png" class="brand-logo"></img>
+        <div class="nav-wrapper blue darken-3">
+            <img src="../images/logo.png" class="brand-logo"></img>
             <a href="/feed" class="brand-logo center">A Bird's Eye View</a>
             <ul class="right hide-on-med-and-down">
-                {{!-- {{#if logged_in}}
-                <li><a href="/login">Login</a></li>
-                {{/if}} --}}
+                {{#if logged_in}}
+                <li><a href="/logout">Logout</a></li>
+                {{/if}}
                 {{#unless logged_in}}
                 <li><a href="/login">Login</a></li>
                 {{/unless}}
-                <li><a href="/feed">User Posts</a></li>
+                <li><a href="/feed">Feed</a></li>
                 <li class="active"><a href="/profile">Profile Page</a></li>
             </ul>
         </div>
