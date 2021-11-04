@@ -2,6 +2,26 @@ const router = require('express').Router();
 const { User, Post, Bird } = require('../models');
 const withAuth = require('../utils/auth');
 
+router.get('/', (req, res) => {
+  // try {
+  //   const userData = await User.findAll({
+  //     attributes: { exclude: ['password'] },
+  //     order: [['name', 'ASC']],
+  //   });
+
+  //   const users = userData.map((project) => project.get({ plain: true }));
+
+  //   // const birdData = await User.findAll({
+  //   //   attributes: { exclude: ['password'] },
+  //   //   order: [['name', 'ASC']],
+  //   // });
+
+  res.render("homepage", {
+    // users,
+    logged_in: req.session.logged_in,
+  })
+});
+
 router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
@@ -11,7 +31,12 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('homepage', {
+    // const birdData = await User.findAll({
+    //   attributes: { exclude: ['password'] },
+    //   order: [['name', 'ASC']],
+    // });
+
+    res.render("homepage", {
       users,
       logged_in: req.session.logged_in,
     });
@@ -81,9 +106,9 @@ router.get("/profile", withAuth, (req, res) => {
       {
         model: Bird
       },
-      {
-        model: Location
-      }
+      // {
+      //   model: Location
+      // }
     ]
   }).then(userPosts => {
     // res.json(userPosts)
