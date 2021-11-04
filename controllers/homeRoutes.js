@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { User, Post } = require('../models');
+const { User, Post, SeenBird } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/content', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
@@ -26,12 +26,16 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-  res.render('login');
+  res.render('login', {
+    logged_in: req.session.logged_in,
+  }
+  );
+
 
 });
 
 //get all posts
-router.get("/", (req, res) => {
+router.get("/feed", withAuth, (req, res) => {
   Post.findAll({
     include: [{
       model: User,
@@ -43,8 +47,9 @@ router.get("/", (req, res) => {
     if (dbPosts.length) {
       const posts = dbPosts.map((project) => project.get({ plain: true }));
 
-      res.render('homepage', {
+      res.render('feed', {
         posts,
+        logged_in: req.session.logged_in
       })
     } else {
       res.status(404).json({ message: "No posts found in db" })
@@ -56,16 +61,19 @@ router.get("/", (req, res) => {
 });
 
 // get all posts by a single user
-router.get("/profile", (req, res) => {
+router.get("/profile", withAuth, (req, res) => {
   Post.findAll({
     where: {
       user_id: req.session.user_id
     },
+    // include: [{
+    //   model: SeenBird,
+    // }]
   }).then(userPosts => {
     // res.json(userPosts)
     if (userPosts) {
-      const posts=userPosts.map((project)=> project.get({plain: true}));
-      res.render('homepage', {posts})
+      const posts = userPosts.map((project) => project.get({ plain: true }));
+      res.render('profile', { posts, logged_in: req.session.logged_in })
     } else {
       res.status(404).json({ message: "No users found in db" })
     }
