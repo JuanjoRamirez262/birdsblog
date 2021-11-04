@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Post, User, SeenBird } = require("../../models");
+const { Post, User, SeenBird, Bird, Location } = require("../../models");
 const moment = require('moment')
 
 router.get("/", (req, res) => {
@@ -94,5 +94,23 @@ router.delete("/:id", (req, res) => {
         res.json(delPost)
     })
 })
+
+router.get('/', (req, res) => {
+    Post.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
+        include: [
+            {
+                model: Bird
+            },
+            {
+                model: Location
+            }
+        ]
+    }).then((posts) => {
+        res.status(200).json(posts)
+    })
+});
 
 module.exports = router;

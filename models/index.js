@@ -19,7 +19,9 @@ Post.hasMany(Comment, {
 Post.belongsToMany(Bird, {
     through: SeenBird
 })
-Post.hasOne(Location)
+Post.hasOne(Location, {
+    foreignKey: "location_id"
+})
 Post.hasMany(Like, {
     onDelete: 'CASCADE'
 })
@@ -40,7 +42,6 @@ Comment.belongsTo(Post)
 Like.belongsTo(Post)
 
 // Location
-
 Location.belongsTo(Post)
 
 module.exports = { User, Post, Location, Bird, Comment, SeenBird, Like }
