@@ -1,41 +1,138 @@
+<h4 class="pageHeader">Empowering users to create and post their bird sightings
+  and encouraging an engaging atmosphere with a community of fellow bird
+  watchers!</h4>
 
-  <div class="row">
-    <form class="col s12" id="post-input">
-      <div class="row post-input">
-        <div class="input-field col s8">
-          <i class="material-icons prefix">nature_people</i>
-          <input id="post-description" type="text" class="validate" placeholder="Add Post">
-          <label for="icon-prefix"></label>
-        </div>
-        <div class="input-field col s4">
-          <i class="material-icons prefix">add_location</i>
-          <input id="location" type="tel" class="validate" placeholder="Add Location">
-          <label for="icon-prefix"></label>
-        </div>
-        <button id="post-input">Submit Post</button>
+<h5 class="pageHeader">Sign up for news about upcoming migrations, local
+  chapters, post about local sighting for other users to see and much more!</h5>
+
+<div class="carousel">
+  <a class="carousel-item" href="#one!"><img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGdryZ6h7HdREcNfIKFPj-quP589zesQGb5g&usqp=CAU"
+    /></a>
+  <a class="carousel-item" href="#two!"><img
+      src="https://www.allaboutbirds.org/news/wp-content/uploads/2020/07/STanager-Shapiro-ML.jpg"
+    /></a>
+  <a class="carousel-item" href="#three!"><img
+      src="https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png"
+    /></a>
+  <a class="carousel-item" href="#four!"><img
+      src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/202984001/1200"
+    /></a>
+  <a class="carousel-item" href="#five!"><img
+      src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/AmericanGoldfinch_MattWilliams_4000x2200.jpg?crop=0,0,4000,2200&wid=4000&hei=2200&scl=1.0"
+    /></a>
+</div>
+
+<h5 class="pageHeader">Bird of the Week</h5>
+<div class="row">
+  <div class="col s12 m4">
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="https://www.allaboutbirds.org/guide/assets/og/75351781-1200px.jpg"
+        />
+        <span class="card-title">The European Starling</span>
       </div>
-    </form>
+      <div class="card-content">
+        <p>It is estimated that there are over 1 billion European Starlings in
+          the world - only 3 other species are birds are in this billion club.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
   </div>
-  
- {{#each users as |user| }}
- <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1550853024-fae8cd4be47f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlyZCUyMHJhaW58ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80">
-          <span class="card-title"></span>
-        </div>
-        <div class="card-content">
-          <p>Displayed here should be some user info; TBD what exactly</p>
-        </div>
-        <div class="card-action">
-          <a href="#"> {{name}} My Posts</a>
-        </div>
+</div>
+
+<h5 class="pageHeader">Upcoming Migrations</h5>
+<div class="row">
+  <div class="col s4 m4">
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/303216851/1800"
+        />
+        <span class="card-title">Sandhill Cranes</span>
+      </div>
+      <div class="card-content">
+        <p>Each spring thousands of lesser sandhill cranes migrate through
+          Central Washington on their way to breeding grounds in Southern
+          Alaska. After wintering in California, these large, long-legged birds
+          arrive in Washington in mid-February, with peak numbers in early
+          April. On their way south in the fall, migrants have a shorter stay,
+          usually only month, from mid-September to mid-October. With wing-spans
+          that can reach more than 6 feet, their springtime courtship rituals
+          are a site to behold. An estimated 25,000 sandhill cranes migrate
+          through Eastern Washington, and they’re both amazing to watch and to
+          hear, as they communicate to each other with high-volume calls. The
+          best areas for viewing are near Othello, where locals celebrate with a
+          popular Sandhill Crane Festival each spring.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Learn More</a>
       </div>
     </div>
   </div>
 {{/each}}
 
-{{#each posts as |post|}}
-  {{>usercard}}
-{{/each}}
+  <div class="col s4 m4">
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="https://nas-national-prod.s3.amazonaws.com/styles/article_hero_inline/s3/web_dsc06178.jpg?itok=peHrZMSx"
+        />
+        <span class="card-title">Shorebirds</span>
+      </div>
+      <div class="card-content">
+        <p>Most shorebirds, or “waders,” arrive in Washington only twice a year
+          – in the spring and fall. They migrate through our state quickly in
+          spring, arriving in late April and early May as they travel to their
+          arctic nesting grounds from the winter grounds in Central and South
+          America. Shorebirds boast superb fat-storing capabilities, giving them
+          the energy to travel long distances. The long-distance record holder,
+          the bar-tailed godwit, actually increases its body fat by 55 percent
+          before launching its nine-day, nonstop flight, and smaller shorebirds
+          can increase the size of their intestine by 100 percent before
+          migration begins. Shorebirds use the rocky seashores, sandy beaches,
+          mudflats and tidal estuaries in coastal Washington and Puget Sound.
+          Look for large groups of dunlins and other sandpipers at our Port
+          Susan Bay Preserve or at the Nisqually Refuge. In Skagit County, be on
+          the lookout for them feeding in flooded farmlands as part of the
+          Conservancy’s Farming for Wildlife project. More than half a million
+          shorebirds also stop to feed at Grays Harbor, a globally important
+          stopover on a major north-south migratory route known as the “Pacific
+          Flyway.”</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4 m4">
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="https://www.enterprise.com/content/dam/ent-brand/inspiration/missouri-eagles/Derek_Jerrell_Eagle_Article_2_B.jpg"
+        />
+        <span class="card-title">Eagles</span>
+      </div>
+      <div class="card-content">
+        <p>All of the salmon that migrate back up the Skagit River don’t go
+          unnoticed by area raptors. This migration of fins is eagerly followed
+          by a migration of wings as bald eagles make their way to the Skagit
+          each December and January. These regal birds come to feast on chum
+          salmon and they come by the hundreds, making the Skagit one of the
+          best places in the nation for viewing bald eagles in the winter. Folks
+          at the Skagit River Bald Eagle Interpretive Center in Rockport are
+          there to help. They outfit eagle-watchers with directions, tours and
+          tips.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/carousel.js"></script>

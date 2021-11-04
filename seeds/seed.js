@@ -11,9 +11,9 @@ const seenBirdData = require('./seenBirdData.json');
 
 
 const seedDatabase = async () => {
-    try{
+    try {
         await sequelize.sync({ force: true });
-    
+
         await User.bulkCreate(userData, {
             individualHooks: true,
             returning: true,
@@ -25,7 +25,7 @@ const seedDatabase = async () => {
         await Comment.bulkCreate(commentData)
         await Like.bulkCreate(likeData)
         process.exit(0);
-    } catch(err){
+    } catch (err) {
         throw err
     }
 };

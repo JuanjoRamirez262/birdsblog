@@ -11,7 +11,12 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('homepage', {
+    // const birdData = await User.findAll({
+    //   attributes: { exclude: ['password'] },
+    //   order: [['name', 'ASC']],
+    // });
+
+    res.render("homepage", {
       users,
       logged_in: req.session.logged_in,
     });
