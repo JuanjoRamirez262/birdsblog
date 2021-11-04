@@ -1,12 +1,32 @@
- <nav>
-        <div class="nav-wrapper blue darken-3">
-            <img src="../images/logo.jpeg" class="brand-logo"></img>
-            <a href="#" class="brand-logo center">A Bird's Eye View</a>
+<header class="display-flex justify-space-between align-center p-2">
+    <nav>
+        <div class="nav-wrapper">
+            <img src="/birdsblog/assets/lorem-logo.png" class="brand-logo"></img>
+            <a href="/feed" class="brand-logo center">A Bird's Eye View</a>
             <ul class="right hide-on-med-and-down">
+                {{!-- {{#if logged_in}}
                 <li><a href="/login">Login</a></li>
-                <li><a href="/userposts">Posts</a></li>
-                <li><a href="/userposts">Maps</a></li>
+                {{/if}} --}}
+                {{#unless logged_in}}
+                <li><a href="/login">Login</a></li>
+                {{/unless}}
+                <li><a href="/feed">User Posts</a></li>
                 <li class="active"><a href="/profile">Profile Page</a></li>
             </ul>
         </div>
-</nav>
+    </nav>
+</header>
+
+{{!-- <header class="display-flex justify-space-between align-center p-2">
+    <nav>
+        <div class="nav-wrapper">
+            <img src="/birdsblog/assets/lorem-logo.png" class="brand-logo"></img>
+            <a href="#" class="brand-logo center">A Bird's Eye View</a>
+            <ul class="right hide-on-med-and-down">
+                <li><button class="nav-bar-button">Login</button></li>
+                <li><button class="nav-bar-button">User Posts</button></li>
+                <li class="active"><button class="nav-bar-button">Profile Page</button></li>
+            </ul>
+        </div>
+    </nav>
+</header> --}}
