@@ -16,7 +16,7 @@ Post.init({
     },
     location_id: {
         type: DataTypes.INTEGER,
-        allowNull: true
+        allowNull: false
     },
     user_id: {
         type: DataTypes.INTEGER,

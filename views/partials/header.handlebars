@@ -4,9 +4,9 @@
             <img src="/birdsblog/assets/lorem-logo.png" class="brand-logo"></img>
             <a href="/feed" class="brand-logo center">A Bird's Eye View</a>
             <ul class="right hide-on-med-and-down">
-                {{!-- {{#if logged_in}}
-                <li><a href="/login">Login</a></li>
-                {{/if}} --}}
+                {{#if logged_in}}
+                <li><a href="/logout">Logout</a></li>
+                {{/if}}
                 {{#unless logged_in}}
                 <li><a href="/login">Login</a></li>
                 {{/unless}}

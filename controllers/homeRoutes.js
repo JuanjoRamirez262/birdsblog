@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, SeenBird } = require('../models');
+const { User, Post, Bird } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -34,6 +34,16 @@ router.get('/login', (req, res) => {
 
 });
 
+router.get('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.render('homepage')
+    });
+  } else {
+    res.render('homepage')
+  }
+});
+
 //get all posts
 router.get("/feed", withAuth, (req, res) => {
   Post.findAll({
@@ -41,8 +51,9 @@ router.get("/feed", withAuth, (req, res) => {
       model: User,
       attributes: {
         exclude: ["password"]
-      }
-    }]
+      },
+    }
+    ]
   }).then(dbPosts => {
     if (dbPosts.length) {
       const posts = dbPosts.map((project) => project.get({ plain: true }));
@@ -66,9 +77,14 @@ router.get("/profile", withAuth, (req, res) => {
     where: {
       user_id: req.session.user_id
     },
-    // include: [{
-    //   model: SeenBird,
-    // }]
+    include: [
+      {
+        model: Bird
+      },
+      {
+        model: Location
+      }
+    ]
   }).then(userPosts => {
     // res.json(userPosts)
     if (userPosts) {
