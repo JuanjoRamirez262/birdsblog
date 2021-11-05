@@ -1,10 +1,12 @@
-<div class="row">
-  <div class="col s6">
+
+  
     <div class="card">
       <div class="card-image">
-        <img
-          src="{{birds.link}}">
-        <span class="card-title">{{birds.name}}</span>
+        {{!-- <img
+          src="https://www.thespruce.com/thmb/rk3DGZLrlgEOprRfSwKqKopUzk4=/2121x1193/smart/filters:no_upscale()/Bird-GettyImages-582446599-58ec5c4d5f9b58ef7e24e7f4.jpg"> --}}
+          <img
+          src="{{birds.[0].link}}">
+        <span class="card-title">{{birds.[0].name}}</span>
       </div>
       <div class="card-content">
         <p><h5>{{user.name}} post: {{description}}</h5></p>
@@ -14,7 +16,7 @@
         <a href=""><h5>See More of {{user.name}}'s Posts</h5></a>
       </div>
     </div>
-  </div>
+
 
 
   {{!-- variables
