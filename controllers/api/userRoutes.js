@@ -61,14 +61,17 @@ router.post('/', async (req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: req.body.password
-    });
+    })
+    const userData = await User.findOne({ where: { email: req.body.email } })
 
-    // Set up sessions with a 'loggedIn' variable set to `true`
+  
     req.session.save(() => {
+      req.session.user_id = userData.id;
       req.session.logged_in = true;
-      console.log(newUser)
       res.status(200).json(newUser);
     });
+    
+    // Set up sessions with a 'loggedIn' variable set to `true`
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
