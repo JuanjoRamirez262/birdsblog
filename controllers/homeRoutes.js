@@ -97,7 +97,6 @@ router.get("/profile", withAuth, (req, res) => {
       {
         model: Location
       },
-      ,
       {
         model: User
       }
