@@ -29,11 +29,13 @@ router.get('/', (req, res) => {
 
 
 router.get('/login', (req, res) => {
+  const carouselFlag = true;
   if (req.session.logged_in) {
     res.redirect('/');
     return;
   }
   res.render('login', {
+    carouselFlag,
     logged_in: req.session.logged_in,
   }
   );

@@ -14,10 +14,12 @@
 <link rel="stylesheet" href="/css/mainTemplate.css">
 </head>
 
-<body class="blue lighten-5">
+<body>
 {{> header}}
   <main class="container-fluid mt-5">
+    <div class="blue lighten-5">
     {{{ body }}}
+    </div>
   </main>
 
   {{#if logged_in}}
