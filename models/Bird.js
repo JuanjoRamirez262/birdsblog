@@ -18,6 +18,10 @@ Bird.init(
         description: {
             type: DataTypes.TEXT,
             allowNull: false
+        },
+        link: {
+            type: DataTypes.STRING,
+            allowNull:true
         }
     },
     {

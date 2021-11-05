@@ -37,10 +37,8 @@ router.get("/:id", (req, res) => {
       },
       include: [{
         model: Post,
-        // attributes: {
-        //     exclude: ["createdAt", "updatedAt", "password"]
-        // }
-      }]
+      },
+    ]
     }).then(dbUser => {
       if (dbUser.length) {
         res.json(dbUser)
@@ -104,9 +102,12 @@ router.get('/', (req, res) => {
             {
                 model: Bird
             },
-            {
-                model: Location
-            }
+            // {
+            //     model: Location
+            // },
+            // {
+            //   model: User
+            // }
         ]
     }).then((posts) => {
         res.status(200).json(posts)
