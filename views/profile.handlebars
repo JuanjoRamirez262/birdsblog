@@ -18,7 +18,10 @@
     </div>
   </div>
 {{/each}}
-
-{{#each posts as |post|}}
-  {{>usercard}}
-{{/each}}
+<div class="row">
+  <div class="col s6 m7">
+    {{#each posts as |post|}}
+      {{>usercard}}
+    {{/each}}
+  </div>
+</div>
