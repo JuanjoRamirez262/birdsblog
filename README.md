@@ -2,10 +2,9 @@
 
 ## Description
 
-This is a fully responsive full stack application allowing users to create and post their 
+This is a fully responsive full stack application allowing users, more specifically bird lovers/watchers to post and share their sighting with the community. We wanted to give a space to empower users and encourage an engaging atmosphere with a community of fellow bird watchers.
 
-Our motivation was to empowering users to create and post their bird sightings and encouraging an engaging atmosphere with a community of fellow bird watchers!
-
+We learned building a full stack application was much harder than we thought! Even with four collaborators. There are a lot of moving parts. Adding, removing, updating, or changing can break the chain and cause a lot of issues. Also, getting everything to connect was a huge issue. For some of our team members, it's harder for them to visual see how everything connect during the creation. Once the application was complete, then it made it easier for them to see.
 
 ---
 
@@ -23,7 +22,12 @@ Our motivation was to empowering users to create and post their bird sightings a
 
 ## Installation
 
-You will need the package.json and the required dependencies to use the application.
+To install this application, follow the steps below.
+    - Clone the GitHub Repo to your computer
+    - Install the package.json and the dependencies
+    - Create the database in MySql
+    - Run the seeds
+    - Start the server
 
 ---
 
@@ -38,7 +42,7 @@ SCREENSHOTS
 
 ## Contribute
 
-If you would like to contribute, please reach out to us.
+If you would like to contribute, please reach out to us. Our GitHub profiles are below.
 
 ---
 
@@ -50,7 +54,12 @@ Testing was done by the creators.
 
 ## Credits
 
+Credits to everyone on the team. 
 
+Juan Jose Ramirez: https://github.com/JuanjoRamirez262
+Chris Psyden: https://github.com/cpysden-coder
+Chris Ochoto-Feight: https://github.com/Cofeight
+Minhvan Le: https://github.com/mple06
 
 ---
 
@@ -62,6 +71,4 @@ MIT ![Image of MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Questions?
 
-GitHub:
-
-Reach me at 
+GitHub: https://github.com/JuanjoRamirez262/birdsblog
