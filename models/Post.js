@@ -16,12 +16,16 @@ Post.init({
     },
     location_id: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
     },
     user_id: {
         type: DataTypes.INTEGER,
         allowNull: false
-    }
+    },
+    // user_name: {
+    //     type: DataTypes.STRING,
+    //     allowNull: false
+    // }
 }, {
     sequelize,
     timestamps: true,
