@@ -1,0 +1,27 @@
+.pageHeader {
+  text-align: center;
+}
+
+/* .cardContainer {
+  display: flex;
+  justify-content: center;
+} */
+
+.carousel .carousel-item {
+  width: 400px !important;
+}
+
+#submit-post {
+  margin-top: 30px;
+}
+
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  /* max-height: 500px; */
+}
+
+.bird-week {
+  padding: 0 auto;
+}
