@@ -2,10 +2,10 @@
   text-align: center;
 }
 
-.cardContainer {
+/* .cardContainer {
   display: flex;
   justify-content: center;
-}
+} */
 
 .carousel .carousel-item {
   width: 400px !important;

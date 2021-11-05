@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Bird } = require('../models');
+const { User, Post, Bird, Location } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
@@ -71,20 +71,20 @@ router.get("/feed", withAuth, (req, res) => {
       model: Location
     }]
   }).then(dbPosts => {
-      if (dbPosts.length) {
-        const posts = dbPosts.map((project) => project.get({ plain: true }));
+    if (dbPosts.length) {
+      const posts = dbPosts.map((project) => project.get({ plain: true }));
 
-        res.render('feed', {
-          posts,
-          logged_in: req.session.logged_in
-        })
-      } else {
-        res.status(404).json({ message: "No posts found in db" })
-      }
-    }).catch(err => {
-      console.log(err)
-      res.status(500).json({ message: "An error occured getting all posts", err: err })
-    });
+      res.render('feed', {
+        posts,
+        logged_in: req.session.logged_in
+      })
+    } else {
+      res.status(404).json({ message: "No posts found in db" })
+    }
+  }).catch(err => {
+    console.log(err)
+    res.status(500).json({ message: "An error occured getting all posts", err: err })
+  });
 });
 
 // get all posts by a single user

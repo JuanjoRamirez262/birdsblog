@@ -17,7 +17,7 @@ SeenBird.init(
         },
         bird_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
         },
         date: {
             type: DataTypes.INTEGER,
@@ -25,7 +25,7 @@ SeenBird.init(
         }
     },
     {
-        sequelize, 
+        sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,

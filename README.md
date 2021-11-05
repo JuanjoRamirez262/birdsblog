@@ -62,6 +62,6 @@ MIT ![Image of MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Questions?
 
-GitHub:
+GitHub: https://github.com/JuanjoRamirez262/birdsblog
 
-Reach me at 
+Reach us at 
