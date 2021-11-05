@@ -22,11 +22,11 @@ We learned building a full stack application was much harder than we thought! Ev
 
 ## Installation
 
-To install this application, follow the steps below.
-    - Clone the GitHub Repo to your computer
-    - Install the package.json and the dependencies
-    - Create the database in MySql
-    - Run the seeds
+To install this application, follow the steps below. </br>
+    - Clone the GitHub Repo to your computer </br>
+    - Install the package.json and the dependencies </br>
+    - Create the database in MySql </br>
+    - Run the seeds </br>
     - Start the server
 
 ---
