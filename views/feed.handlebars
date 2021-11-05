@@ -1,21 +1,4 @@
-
-  <div class="row">
-    <form class="col s12" id="post-input">
-      <div class="row post-input">
-        <div class="input-field col s8">
-          <i class="material-icons prefix">nature_people</i>
-          <input id="post-description" type="text" class="validate" placeholder="Add Post">
-          <label for="icon-prefix"></label>
-        </div>
-        <div class="input-field col s4">
-          <i class="material-icons prefix">add_location</i>
-          <input id="location" type="tel" class="validate" placeholder="Add Location">
-          <label for="icon-prefix"></label>
-        </div>
-        <button id="post-input">Submit Post</button>
-      </div>
-    </form>
-  </div>
+{{> newPost}}
   
 
 {{#each posts as |post|}}

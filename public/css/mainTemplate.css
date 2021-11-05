@@ -10,3 +10,7 @@
 .carousel .carousel-item {
   width: 400px !important;
 }
+
+#submit-post {
+  margin-top: 30px;
+}
