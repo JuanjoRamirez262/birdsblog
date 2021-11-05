@@ -1,7 +1,7 @@
 //Create Post from Profile page
 document.querySelector("#post-input").addEventListener("submit", (evt) => {
   evt.preventDefault();
-  console.log(document.querySelector("#bird-selection").value)
+  console.log("working")
   let bird, location;
   switch(document.querySelector("#bird-selection").value){
     case "American Robin":
@@ -40,15 +40,9 @@ document.querySelector("#post-input").addEventListener("submit", (evt) => {
       "Content-Type": "application/json"
     }
   }).then(res => {
-    if (!res.ok) {
-      console.log(res);
-      res.redirected('/')
-    } else {
-      res.json()
-        .then(data => {
-          console.log(data)
-          // location.href = `/profile/${data.id}`
-        })
-    }
+    console.log(res)
+    if (res.ok) {
+      window.location.reload()
+    } 
   })
 })
