@@ -3,8 +3,10 @@ const { User, Post, Bird, Location } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
+  const carouselFlag = true;
   res.render("homepage", {
     logged_in: req.session.logged_in,
+    carouselFlag
   })
 });
 
@@ -40,18 +42,24 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/logout', (req, res) => {
+  const carouselFlag = true;
   if (req.session.logged_in) {
     req.session.destroy(() => {
-      res.render('homepage')
+      res.render('homepage', {
+        carouselFlag
+      })
     });
   } else {
-    res.render('homepage')
+    res.render('homepage', {
+      carouselFlag
+    })
   }
 });
 
 //get all posts
 router.get("/feed", withAuth, (req, res) => {
   Post.findAll({
+    order: [["createdAt", "DESC"]],
     include: [{
       model: User,
       attributes: {
@@ -89,7 +97,7 @@ router.get("/profile", withAuth, (req, res) => {
   Post.findAll({
     where: {
       user_id: req.session.user_id
-    },
+    },order: [["createdAt", "DESC"]],
     include: [
       {
         model: Bird
@@ -97,7 +105,6 @@ router.get("/profile", withAuth, (req, res) => {
       {
         model: Location
       },
-      ,
       {
         model: User
       }

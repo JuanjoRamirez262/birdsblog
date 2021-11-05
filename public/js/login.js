@@ -46,7 +46,7 @@ document.querySelector("#signup").addEventListener("submit", (e) => {
     } else {
       res.json()
       .then(data => {
-        location.href = `/profile/${data.id}`
+        location.href = `/`
       })
     }
   })

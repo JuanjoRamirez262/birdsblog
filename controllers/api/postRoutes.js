@@ -3,30 +3,6 @@ const router = express.Router();
 const { Post, User, SeenBird, Bird, Location } = require("../../models");
 const moment = require('moment')
 
-// router.get("/", (req, res) => {
-//     Post.findAll({
-//         include: [{
-//             model: User,
-//             attributes: {
-//             exclude: ["password"]
-//         }
-//         }]
-//     }).then(dbPosts => {
-//         if (dbPosts.length) {
-//             const posts=dbPosts.map((project)=> project.get({plain: true}));
-
-//             res.render('homepage', {
-//                 posts,
-//             })
-//         } else {
-//             res.status(404).json({ message: "No posts found in db" })
-//         }
-//     }).catch(err => {
-//         console.log(err)
-//         res.status(500).json({ message: "An error occured getting all posts", err: err })
-//     });
-// });
-
 router.get("/:id", (req, res) => {
     User.findAll({
       where: {
@@ -53,7 +29,6 @@ router.get("/:id", (req, res) => {
 
 //create post
 router.post("/", (req, res) => {
-    console.log(req.body)
     if (!req.session.logged_in) {
         return res.status(401).send("please login first")
     }
@@ -68,12 +43,8 @@ router.post("/", (req, res) => {
             bird_id: req.body.bird_id,
             date: moment().unix()
         })
-            .then((newSeenBird) => {
-                res.status(200).json({
-                    message: "Post created",
-                    newPost,
-                    newSeenBird
-                })
+            .then((postCreated) => {
+                res.status(200).json({postCreated})
             })
         // res.status(200).json(newPost)
     }
